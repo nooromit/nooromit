@@ -9,7 +9,7 @@
 
 ## 🌐 لینک‌های ما
 
-- 🌍 سایت: [nooromit.github.io](https://nooromit.github.io)
+- 🌍 سایت:[nooromit.ir](https://noormit.ir)
 - 📱 تلگرام: [t.me/nooromit](https://t.me/nooromit)
 - 📸 اینستاگرام: [instagram.com/nooromit](https://instagram.com/nooromit)
 - 🧠 گیت‌هاب: [github.com/nooromit](https://github.com/nooromit)
