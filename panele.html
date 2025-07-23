@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nooromit | نورومیت</title>
+    <!-- کتابخانه آیکون ها (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+        <link rel="icon" href="nooromit.jpg" type="image/x-icon">
+    <link rel="icon" href="nooromit.jpg" type="image/png">
+
+    <style>
+        /* CSS برای ریسپانسیو بودن و نمایش صحیح در همه دستگاه ها طراحی شده */
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #101729; 
+            color: #e6e6e6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 650px;
+            width: 90%; /* این باعث میشه در صفحه های کوچک، از کادر بیرون نزنه */
+            padding: 30px;
+        }
+
+        .profile-picture {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid rgba(255, 255, 255, 0.5);
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #a0aec0;
+            margin-top: 0;
+            margin-bottom: 35px;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .link-button {
+            background: #2d3748;
+            border: 1px solid #4a5568;
+            border-radius: 12px;
+            padding: 16px;
+            color: #f7fafc;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .link-button:hover {
+            background: #4a5568;
+            border-color: #718096;
+            transform: translateY(-2px);
+        }
+
+        .link-button i {
+            font-size: 1.3rem;
+            color: #a0aec0;
+        }
+
+        /* این بخش کد، ظاهر صفحه را در موبایل بهینه می کند */
+        @media (max-width: 480px) {
+            h1 { font-size: 2.2rem; }
+            p { font-size: 1rem; }
+            .profile-picture { width: 100px; height: 100px; }
+            .container { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="particles-js"></div>
+
+    <main class="container">
+        <img src="nooromit.jpg" alt="عکس پروفایل" class="profile-picture">
+
+        <h1>نورومیت </h1>
+        <div class="links">
+            <a href="" target="_blank" class="link-button"><i class="fab fa-instagram"></i> اینستاگرام</a>
+            <a href="https://www.youtube.com/@Nooromit/videos" target="_blank" class="link-button"><i class="fab fa-youtube"></i> یوتیوب</a>
+            <a href="https://nooromit.ir" target="_blank" class="link-button"><i class="fas fa-globe"></i> وب‌سایت</a>
+            <a href="https://github.com/nooromit/nooromit" target="_blank" class="link-button"><i class="fab fa-github"></i> گیت‌هاب</a>
+            <a href="https://t.me/nooromit" target="_blank" class="link-button"><i class="fab fa-telegram"></i> کانال تلگرام</a>
+            <br>
+            <br>
+        </div>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
+    <script>
+        // --- JavaScript: با افکت جذب کننده (Grab) قوی تر ---
+        particlesJS("particles-js", {
+          "particles": {
+            "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+            "color": { "value": "#ffffff" },
+            "shape": { "type": "circle" },
+            "opacity": { "value": 0.5, "random": true },
+            "size": { "value": 3, "random": true },
+            "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.2, "width": 1 },
+            "move": { "enable": true, "speed": 2, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
+          },
+          "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+              "onhover": {
+                "enable": true,
+                "mode": "grab" /* <<<--- افکت به جذب تغییر کرد */
+              },
+              "onclick": {
+                "enable": false, /* افکت کلیک غیرفعال شد */
+                "mode": "push"
+              },
+              "resize": true
+            },
+            "modes": {
+              "grab": {
+                "distance": 200, /* <<<--- فاصله جذب بیشتر شد */
+                "line_linked": {
+                  "opacity": 0.8 /* <<<--- خطوط اتصال قوی تر و واضح تر شدن */
+                }
+              },
+              "bubble": { "distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3 },
+              "repulse": { "distance": 200, "duration": 0.4 },
+              "push": { "particles_nb": 4 }
+            }
+          },
+          "retina_detect": true
+        });
+    </script>
+
+</body>
+</html>
